@@ -1,45 +1,78 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>GAME</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title></title>
+  </head>
+  <body>
+    <body>
   <header>
     <h1>JUEGO DE TRIVIA</h1>
     <p>Cuanto Sabes De Animales</p>
   </header>
-  <div class="container">
-  
-      <h3>1 - ¿cuantos patas tiene una araña?</h3>
-      <label>
-        <input type="radio" name="display" id="one" "> 6 pata </label>
-      <label>
-        <input type="radio" name="display" id="two""> 12 patas
-      </label>
-      <label>
-        <input type="radio" name="display" id="three""> 8 patas 
-      </label>
-<br/>
-      <button id="answer1" type="button"class="ask">Respuesta</button>
-    
-    
-      <h3>2 - ¿Que pájaro es el único que puede volar hacia atrás?</h3>
-      <label>
-        <input type="radio" name="display" id="four"> Golondrina</label>
-      <label>
-        <input type="radio" name="display" id="five"> Colibrí
-      </label>
-      <label>
-        <input type="radio" name="display" id="six""> Loro
-      </label>
-    <br/>
-    <button id="answer2"type="button"class"ask">Respuestas</button>
-    <form>
-    </div>
-    
-    </form>
+    <section class="hito1">
+      <div class="content">
+        <form class="form" action="">
+          <h2>¿Cuantas patas tiene una araña?</h2>
+          <label> <input type="radio" name="display" id="one" />6 patas </label>
+          <label>
+            <input type="radio" name="display" id="two" />12 patas
+          </label>
+          <label>
+            <input type="radio" name="display" id="three" />8 patas
+          </label>
+          <br />
+          <button id="answer1" type="button" class="ask">Respuesta</button>
+          <h2>¿Qué pájaro es el único que puede volar hacia atrás?</h2>
+          <label>
+            <input type="radio" name="display" id="four" />Golondrina
+          </label>
+          <label>
+            <input type="radio" name="display" id="five" />Colibrí
+          </label>
+          <label> <input type="radio" name="display" id="six" />Loro </label>
+          <br />
+          <button id="answer2" type="button" class="ask">Respuesta</button>
+        </form>
+      </div>
+    </section>
+    <script>
+      const $answerOne = document.getElementById("answer1"),
+        $inputOne = document.getElementById("one"),
+        $inputTwo = document.getElementById("two"),
+        $inputThree = document.getElementById("three");
+
+      $answerOne.addEventListener("click", function onclick(event) {
+        if ($inputThree.checked) {
+          alert(" Marcaste 8 patas, respuesta Correcta!!!");
+        } else if ($inputTwo.checked) {
+          alert(" Marcaste 12 patas, respuesta Incorrecta!!!");
+        } else if ($inputOne.checked) {
+          alert(" Marcaste 6 patas, respuesta Incorrecta!!!");
+        } else {
+          alert(" Por favor, selecciona una respuesta");
+        }
+      });
+
+      const $answerTwo = document.getElementById("answer2"),
+        $inputFour = document.getElementById("four"),
+        $inputFive = document.getElementById("five"),
+        $inputSix = document.getElementById("six");
+
+      $answerTwo.addEventListener("click", function onclick(event) {
+        if ($inputFive.checked) {
+          alert(" Marcaste Colibrí, respuesta Correcta!!!");
+        } else if ($inputFour.checked) {
+          alert(" Marcaste Golondrina, respuesta Incorrecta!!!");
+        } else if ($inputSix.checked) {
+          alert(" Marcaste Loro, respuesta Incorrecta!!!");
+        } else {
+          alert("Selecciona una respuesta");
+        }
+      });
+    </script>
+  </body>
+</html>
